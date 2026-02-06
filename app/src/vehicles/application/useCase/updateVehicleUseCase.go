@@ -9,6 +9,6 @@ type UpdateVehicleUseCase struct {
 func NewUpdateVehicleUseCase(repo repositories.IVehicleRepository) *UpdateVehicleUseCase {
     return &UpdateVehicleUseCase{repo: repo}
 }
-func (uc *UpdateVehicleUseCase) Execute(id int, v entities.Vehicle) error {
-    return uc.repo.Update(id, v)
+func (uc *UpdateVehicleUseCase) Execute(id int, userId int, v entities.Vehicle) error {
+    return uc.repo.Update(id, userId, v)
 }

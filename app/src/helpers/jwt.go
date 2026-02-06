@@ -1,13 +1,12 @@
 package helpers
 
 import (
-	"os"
 	"time"
 
 	"github.com/dgrijalva/jwt-go"
 )
 
-var jwtKey = []byte(os.Getenv("JWT_SECRET"))
+var jwtKey = []byte("encryptky0")
 
 type Claims struct {
 	IdUser int `json:"user_id"`

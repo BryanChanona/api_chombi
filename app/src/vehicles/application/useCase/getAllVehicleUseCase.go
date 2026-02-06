@@ -11,6 +11,6 @@ type GetAllVehiclesUseCase struct {
 func NewGetAllVehiclesUseCase(repo repositories.IVehicleRepository) *GetAllVehiclesUseCase {
     return &GetAllVehiclesUseCase{repo: repo}
 }
-func (uc *GetAllVehiclesUseCase) Execute() ([]entities.VehicleResponse, error) {
-    return uc.repo.GetAll()
+func (uc *GetAllVehiclesUseCase) Execute(userId int) ([]entities.VehicleResponse, error) {
+    return uc.repo.GetAll(userId)
 }
